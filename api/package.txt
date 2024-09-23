@@ -1,0 +1,7 @@
+npm install bcrypt js dotenv express express-async-handler jsonwebtoken mongoose morgan concurrently nodemon
+
+
+NkLrkmlr7Lyenb9N
+
+
+cxohYJRg7gjEwINP
