@@ -1,7 +1,7 @@
 const products = [
     {
       name: "Smartphone XYZ",
-      image: "api\data\images\phone.jpg",
+      image: "api/data/images/phone.jpg",
       description: "Un smartphone de dernière génération avec un écran AMOLED et une autonomie de 48 heures.",
       rating: 4.5,
       price: 699,
@@ -18,7 +18,7 @@ const products = [
     },
     {
       name: "Ordinateur portable ABC",
-      image: "api\data\images\abc.jpg",
+      image: "api/data/images/abc.jpg",
       description: "Ordinateur portable avec processeur Intel i7, 16 Go de RAM et SSD 512 Go.",
       rating: 4.2,
       price: 1200,
@@ -35,7 +35,7 @@ const products = [
     },
     {
       name: "Écouteurs sans fil PRO",
-      image: "api\data\images\beats-fit-pro.jpg",
+      image: "api/data/images/beats-fit-pro.jpg",
       description: "Écouteurs avec réduction active du bruit et autonomie de 10 heures.",
       rating: 4.7,
       price: 149,
@@ -52,7 +52,7 @@ const products = [
     },
     {
       name: "Montre connectée Zeta",
-      image: "api\data\images\smartmo.jpg",
+      image: "api/data/images/smartmo.jpg",
       description: "Montre connectée avec suivi des activités sportives et capteur de fréquence cardiaque.",
       rating: 4.3,
       price: 199,
@@ -69,7 +69,7 @@ const products = [
     },
     {
       name: "Tablette UltraTab 10",
-      image: "api\data\images\tablette.jpeg",
+      image: "api/data/images/tablette.jpeg",
       description: "Tablette 10 pouces avec écran haute résolution et 128 Go de stockage.",
       rating: 4.6,
       price: 499,
@@ -86,7 +86,7 @@ const products = [
     },
     {
       name: "Casque de réalité virtuelle VRX",
-      image: "api\data\images\Fonction-casque-de-realite-virtuelle.jpg",
+      image: "api/data/images/Fonction-casque-de-realite-virtuelle.jpg",
       description: "Casque VR avec un champ de vision de 110 degrés et support pour la réalité augmentée.",
       rating: 4.8,
       price: 299,
@@ -103,7 +103,7 @@ const products = [
     },
     {
       name: "Caméra Reflex Pro",
-      image: "api\data\images\camera.jpg",
+      image: "api/data/images/camera.jpg",
       description: "Caméra reflex avec capteur 24MP et vidéo 4K.",
       rating: 4.6,
       price: 999,
@@ -120,7 +120,7 @@ const products = [
     },
     {
       name: "Casque Audio HD",
-      image: "api\data\images\csqu.jpg",
+      image: "api/data/images/csqu.jpg",
       description: "Casque audio haute définition avec son stéréo.",
       rating: 4.4,
       price: 199,
@@ -137,7 +137,7 @@ const products = [
     },
     {
       name: "Drone Quadcopter X1",
-      image: "api\data\images\drone.jpg",
+      image: "api/data/images/drone.jpg",
       description: "Drone avec caméra 1080p et autonomie de 30 minutes.",
       rating: 4.7,
       price: 499,
@@ -154,7 +154,7 @@ const products = [
     },
     {
       name: "Projecteur Home Cinema",
-      image: "api\data\images\projec.jpg",
+      image: "api/data/images/projec.jpg",
       description: "Projecteur 4K avec une luminosité de 3000 lumens.",
       rating: 4.8,
       price: 799,
@@ -171,7 +171,7 @@ const products = [
     },
     {
       name: "Appareil photo compact X100",
-      image: "api\data\images\photo.jpg",
+      image: "api/data/images/photo.jpg",
       description: "Appareil photo compact avec zoom optique 10x.",
       rating: 4.3,
       price: 349,
@@ -188,7 +188,7 @@ const products = [
     },
     {
       name: "Téléviseur 4K Ultra HD 55 pouces",
-      image: "api\data\images\tv.jpg",
+      image: "api/data/images/tv.jpg",
       description: "Téléviseur 4K avec HDR10 et assistant vocal intégré.",
       rating: 4.7,
       price: 1299,
@@ -205,7 +205,7 @@ const products = [
     },
     {
       name: "Clavier mécanique RGB",
-      image: "api\data\images\clavier.jpg",
+      image: "api/data/images/clavier.jpg",
       description: "Clavier mécanique avec rétroéclairage RGB personnalisable.",
       rating: 4.5,
       price: 149,
@@ -222,7 +222,7 @@ const products = [
     },
     {
       name: "Souris gaming ultra-précise",
-      image: "api\data\images\souris.jpg",
+      image: "api/data/images/souris.jpg",
       description: "Souris avec capteur optique 16000 DPI et boutons programmables.",
       rating: 4.6,
       price: 99,
@@ -239,7 +239,7 @@ const products = [
     },
     {
       name: "Imprimante Multifonction",
-      image: "api\data\images\R.jpg",
+      image: "api/data/images/R.jpg",
       description: "Imprimante tout-en-un avec scanner et Wi-Fi.",
       rating: 4.2,
       price: 129,
@@ -256,7 +256,7 @@ const products = [
     },
     {
       name: "Station d'accueil USB-C",
-      image: "api\data\images\station.jpg",
+      image: "api/data/images/station.jpg",
       description: "Station d'accueil avec ports HDMI, USB et Ethernet.",
       rating: 4.3,
       price: 79,
@@ -273,7 +273,7 @@ const products = [
     },
     {
       name: "Chargeur sans fil rapide",
-      image: "api\data\images\charg.jpg",
+      image: "api/data/images/charg.jpg",
       description: "Chargeur sans fil compatible avec la recharge rapide Qi.",
       rating: 4.6,
       price: 39,
@@ -290,7 +290,7 @@ const products = [
     },
     {
       name: "Smartwatch Sport Pro",
-      image: "api\data\images\smartsport.jpg",
+      image: "api/data/images/smartsport.jpg",
       description: "Montre connectée avec GPS intégré et suivi de la fréquence cardiaque.",
       rating: 4.4,
       price: 299,
@@ -307,7 +307,7 @@ const products = [
     },
     {
       name: "Système de sécurité sans fil",
-      image: "api\data\images\security.jpg",
+      image: "api/data/images/security.jpg",
       description: "Système de surveillance avec caméras HD et détection de mouvement.",
       rating: 4.7,
       price: 599,
@@ -324,7 +324,7 @@ const products = [
     },
     {
       name: "Aspirateur robot intelligent",
-      image: "api\data\images\robot.jpg",
+      image: "api/data/images/robot.jpg",
       description: "Aspirateur robot avec capteurs de navigation et compatibilité avec assistant vocal.",
       rating: 4.8,
       price: 349,
@@ -341,7 +341,7 @@ const products = [
     },
     {
       name: "Barre de son Bluetooth",
-      image: "api\data\images\son.jpg",
+      image: "api/data/images/son.jpg",
       description: "Barre de son avec connectivité Bluetooth et son surround 3D.",
       rating: 4.5,
       price: 299,
@@ -358,7 +358,7 @@ const products = [
     },
     {
       name: "Routeur Wi-Fi 6 Pro",
-      image: "api\data\images\roteur.jpg",
+      image: "api/data/images/roteur.jpg",
       description: "Routeur Wi-Fi 6 avec technologie MU-MIMO pour une connexion rapide et stable.",
       rating: 4.6,
       price: 229,
@@ -375,7 +375,7 @@ const products = [
     },
     {
       name: "Enceinte Bluetooth Portable",
-      image: "api\data\images\musique.jpg",
+      image: "api/data/images/musique.jpg",
       description: "Enceinte Bluetooth étanche avec 12 heures d'autonomie.",
       rating: 4.7,
       price: 149,
@@ -392,7 +392,7 @@ const products = [
     },
     {
       name: "Lecteur Blu-ray Ultra HD",
-      image: "api\data\images\bd-mp4k_b.jpg",
+      image: "api/data/images/bd-mp4k_b.jpg",
       description: "Lecteur Blu-ray avec support pour Dolby Vision et HDR10.",
       rating: 4.3,
       price: 179,
@@ -409,7 +409,7 @@ const products = [
     },
     {
       name: "Moniteur 4K 27 pouces",
-      image: "api\data\images\pouces.jpg",
+      image: "api/data/images/pouces.jpg",
       description: "Moniteur avec résolution 4K et 144Hz pour une expérience de jeu immersive.",
       rating: 4.8,
       price: 499,
@@ -426,7 +426,7 @@ const products = [
     },
     {
       name: "Climatiseur Portable",
-      image: "api\data\images\climatiseur.jpg",
+      image: "api/data/images/climatiseur.jpg",
       description: "Climatiseur portable avec fonction déshumidificateur et télécommande.",
       rating: 4.2,
       price: 399,
@@ -443,7 +443,7 @@ const products = [
     },
     {
       name: "Caméscope HD Compact",
-      image: "api\data\images\compact.jpg",
+      image: "api/data/images/compact.jpg",
       description: "Caméscope HD avec zoom optique 20x et stabilisateur d'image intégré.",
       rating: 4.5,
       price: 299,
@@ -460,7 +460,7 @@ const products = [
     },
     {
       name: "Sèche-cheveux Pro",
-      image: "api\data\images\seche.jpg",
+      image: "api/data/images/seche.jpg",
       description: "Sèche-cheveux professionnel avec moteur puissant et technologie ionique.",
       rating: 4.4,
       price: 129,
@@ -477,7 +477,7 @@ const products = [
     },
     {
       name: "Lampe de Bureau LED",
-      image: "api\data\images\lampe.jpg",
+      image: "api/data/images/lampe.jpg",
       description: "Lampe de bureau LED avec contrôle tactile et luminosité réglable.",
       rating: 4.6,
       price: 59,
@@ -494,7 +494,7 @@ const products = [
     },
     {
       name: "Tondeuse à cheveux Pro",
-      image: "api\data\images\tendeuse.jpg",
+      image: "api/data/images/tendeuse.jpg",
       description: "Tondeuse à cheveux avec réglage de la longueur et batterie longue durée.",
       rating: 4.7,
       price: 89,
@@ -511,7 +511,7 @@ const products = [
     },
     {
       name: "Montre connectée Luxe",
-      image: "api\data\images\montrelux.jpg",
+      image: "api/data/images/montrelux.jpg",
       description: "Montre connectée haut de gamme avec écran AMOLED et design élégant.",
       rating: 4.9,
       price: 699,
@@ -528,7 +528,7 @@ const products = [
     },
     {
       name: "Table de mixage DJ",
-      image: "api\data\images\mix.jpg",
+      image: "api/data/images/mix.jpg",
       description: "Table de mixage professionnelle avec effets intégrés et compatibilité USB.",
       rating: 4.8,
       price: 799,
@@ -545,7 +545,7 @@ const products = [
     },
     {
       name: "Ventilateur colonne silencieux",
-      image: "api\data\images\vontilateur.jpg",
+      image: "api/data/images/vontilateur.jpg",
       description: "Ventilateur colonne avec télécommande et mode silencieux.",
       rating: 4.3,
       price: 99,
@@ -562,7 +562,7 @@ const products = [
     },
     {
       name: "Machine à café automatique",
-      image: "api\data\images\cafe.jpg",
+      image: "api/data/images/cafe.jpg",
       description: "Machine à café avec broyeur intégré et écran tactile.",
       rating: 4.7,
       price: 499,
@@ -579,7 +579,7 @@ const products = [
     },
     {
       name: "Brosse à dents électrique",
-      image: "api\data\images\brosse.jpg",
+      image: "api/data/images/brosse.jpg",
       description: "Brosse à dents électrique avec 5 modes de brossage et minuteur intégré.",
       rating: 4.5,
       price: 59,
@@ -596,7 +596,7 @@ const products = [
     },
     {
       name: "Pèse-personne connecté",
-      image: "api\data\images\kg.jpg",
+      image: "api/data/images/kg.jpg",
       description: "Balance connectée avec suivi du poids, de la masse graisseuse et de l'IMC.",
       rating: 4.4,
       price: 49,
@@ -613,7 +613,7 @@ const products = [
     },
     {
       name: "Trottinette électrique",
-      image: "api\data\images\trotinette.jpg",
+      image: "api/data/images/trotinette.jpg",
       description: "Trottinette électrique avec autonomie de 25 km et pliage rapide.",
       rating: 4.5,
       price: 499,
@@ -630,7 +630,7 @@ const products = [
     },
     {
       name: "Imprimante 3D Pro",
-      image: "api\data\images\troisD.jpg",
+      image: "api/data/images/troisD.jpg",
       description: "Imprimante 3D haute précision avec support pour plusieurs matériaux.",
       rating: 4.7,
       price: 749,
@@ -647,7 +647,7 @@ const products = [
     },
     {
       name: "Caméra de surveillance extérieure",
-      image: "api\data\images\surveillence.jpg",
+      image: "api/data/images/surveillence.jpg",
       description: "Caméra de sécurité extérieure avec vision nocturne et détection de mouvement.",
       rating: 4.6,
       price: 199,
@@ -664,7 +664,7 @@ const products = [
     },
     {
       name: "Console de jeu 8K",
-      image: "api\data\images\console.jpeg",
+      image: "api/data/images/console.jpeg",
       description: "Console de jeu dernière génération avec support 8K et ray tracing.",
       rating: 4.9,
       price: 699,

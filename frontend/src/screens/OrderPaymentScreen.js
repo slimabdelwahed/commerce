@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 const OrderPaymentScreen = ({ orderId }) => {
   const [paymentId, setPaymentId] = useState('');
   const [message, setMessage] = useState('');
@@ -16,7 +17,7 @@ const OrderPaymentScreen = ({ orderId }) => {
       };
 
       const { data } = await axios.put(
-        `/api/orders/${orderId}/payment`,
+        `/api/Order/${orderId}/payment`,
         { id: paymentId, status: 'completed' },
         config
       );
@@ -28,7 +29,7 @@ const OrderPaymentScreen = ({ orderId }) => {
   };
 
   return (
-    <div>
+    /*<div>
       <h1>Effectuer un paiement</h1>
       {message && <p>{message}</p>}
       <div>
@@ -40,7 +41,22 @@ const OrderPaymentScreen = ({ orderId }) => {
         />
       </div>
       <button onClick={payOrder}>Payer la commande</button>
+    </div>*/
+    <div className="container mt-5">
+    <h1 className="text-center mb-4">Effectuer un paiement</h1>
+    {message && <div className="alert alert-warning text-center">{message}</div>}
+    <div className="mb-3">
+        <label htmlFor="paymentId" className="form-label">ID de paiement</label>
+        <input
+            type="text"
+            id="paymentId"
+            className="form-control"
+            value={paymentId}
+            onChange={(e) => setPaymentId(e.target.value)}
+        />
     </div>
+    <button onClick={payOrder} className="btn btn-primary w-100">Payer la commande</button>
+</div>
   );
 };
 

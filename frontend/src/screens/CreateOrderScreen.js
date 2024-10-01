@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 const CreateOrderScreen = () => {
   const [orderItems, setOrderItems] = useState('');
   const [shippingAdress, setShippingAdress] = useState('');
@@ -9,7 +9,7 @@ const CreateOrderScreen = () => {
   const [taxPrice, setTaxPrice] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [message, setMessage] = useState('');
-
+  const navigate = useNavigate();
   const submitHandler = async (e) => {
     e.preventDefault();
 
@@ -23,7 +23,7 @@ const CreateOrderScreen = () => {
       };
 
       const { data } = await axios.post(
-        '/api/orders',
+        '/api/Order',
         {
           orderItems,
           shippingAdress,
@@ -36,6 +36,7 @@ const CreateOrderScreen = () => {
       );
 
       setMessage('Commande créée avec succès');
+      navigate("/payment");
     } catch (error) {
       setMessage('Erreur lors de la création de la commande');
     }

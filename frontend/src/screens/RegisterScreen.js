@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterScreen = () => {
   const [name, setName] = useState('');
@@ -7,6 +8,7 @@ const RegisterScreen = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
   
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ const RegisterScreen = () => {
     }
 
     try {
-      const { data } = await axios.post('/api/users', {
+      const { data } = await axios.post('/api/Users', {
         name,
         email,
         password
@@ -25,6 +27,7 @@ const RegisterScreen = () => {
 
       setMessage('Inscription réussie');
       localStorage.setItem('userInfo', JSON.stringify(data));
+      navigate("/profil");
     } catch (error) {
       setMessage('Erreur lors de l\'inscription');
     }

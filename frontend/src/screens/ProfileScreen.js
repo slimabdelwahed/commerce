@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 const ProfileScreen = () => {
   const [userInfo, setUserInfo] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -17,7 +17,7 @@ const ProfileScreen = () => {
           }
         };
 
-        const { data } = await axios.get('/api/users/profile', config);
+        const { data } = await axios.get('/api/Users/profile', config);
         setUserInfo(data);
         setName(data.name);
         setEmail(data.email);
@@ -39,9 +39,10 @@ const ProfileScreen = () => {
         }
       };
 
-      const { data } = await axios.put('/api/users/profile', { name, email }, config);
+      const { data } = await axios.put('/api/Users/profile', { name, email }, config);
       setMessage('Profil mis à jour avec succès');
       setUserInfo(data);
+      navigate('/login'); 
     } catch (error) {
       setMessage('Erreur lors de la mise à jour du profil');
     }

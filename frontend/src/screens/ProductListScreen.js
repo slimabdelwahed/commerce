@@ -7,11 +7,15 @@ const ProductListScreen = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
+    console.log("5555");
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get('./data/Products');
+
+        const  data  = await axios.get('http://localhost:3000/api/Products');
+        console.log("0000",data);
         setProducts(data);
       } catch (error) {
+        console.log("1111");
         setMessage('Erreur lors de la récupération des produits');
       }
     };

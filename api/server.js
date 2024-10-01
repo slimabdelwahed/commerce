@@ -1,15 +1,25 @@
 
-const express=require("express");
-const app=express();
-const dotenv=require("dotenv");
-const mongoose=require("mongoose")
-const products = require("./data/Products");
-dotenv.config();
-const PORT=process.env.PORT|| 3000 ;
 
-//connect DB
-console.log('connected to ',process.env.MONGOOSEDB_URL);
-mongoose.connect(process.env.MONGOOSEDB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+
+
+//userName  abdelwahedslim0
+//password  ONS0ZQFu05cSKygK
+
+const express = require("express");
+const app = express();
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+dotenv.config();
+const PORT = process.env.PORT || 3000;
+
+const databaseSeeder = require('./databaseSeeder');
+const userRoute = require("./routes/User");
+const productRoute = require("./routes/Product");
+const orderRoute = require('./routes/Order');
+const cors = require('cors');
+
+// Connect DB
+mongoose.connect(process.env.MONGOOSEDB_URL)
     .then(() => {
         console.log("DB connected");
         app.listen(PORT, () => {
@@ -20,43 +30,19 @@ mongoose.connect(process.env.MONGOOSEDB_URL, { useNewUrlParser: true, useUnified
         console.error("DB connection error:", err);
     });
 
-/*api products test route
-app.get("/api/products",(req,res)=>{
-    const products=products;
-    res.json(products);
-});
+    app.use(cors());
 
-app.get("/api/products/:id",(req,res)=>{
-    const products=products;
-    const product=products.find((product)=>product.id===req.params.id)
-    res.json(product);
-});*/
-const databaseSeeder=require('./databaseSeeder');
-const userRoute=require("./routes/User");
-const productRoute=require("./routes/Product");
-const orderRoute=require('./routes/Order');
+// Middleware for JSON parsing
+app.use(express.json());
 
-app.use(express.json())
+// Database seeder route
+app.use('/api/seed', databaseSeeder);
 
-//database seeder routes
-app.use('/api/seed',databaseSeeder);
+// Routes for users
+app.use('/api/User', userRoute);
 
+// Routes for products
+app.use('/api/Product', productRoute);
 
-// routes for users
-//api/users/login
-app.use('/api/users',userRoute);
-
-//routes for products
-app.use('/api/products',productRoute);
-
-//routes for order
-app.use('/api/orders',orderRoute);
-
-app.listen(PORT || 9000,()=>{
-    console.log('server listening on port ',PORT);
-});
-
-
-
-//userName  abdelwahedslim0
-//password  ONS0ZQFu05cSKygK
+// Routes for orders
+app.use('/api/Order', orderRoute);

@@ -13,7 +13,7 @@ res.json({
     name:user.name,
     email:user.email,
     isAdmin:user.isAdmin,
-    token:null,
+    token:generateToken(user._id),
     createdAt:user.createdAt
 })
 }else{ 
@@ -24,7 +24,7 @@ res.json({
 );
 
 //register route
-userRoute.post('/',AsyncHandler(async(req,res)=>{
+userRoute.post('/signup',AsyncHandler(async(req,res)=>{
     const {name,email,password}=req.body;
     const existUser=await User.findOne({email});
     if(existUser){

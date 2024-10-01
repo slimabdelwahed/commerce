@@ -1,12 +1,15 @@
 {
+  
   "name": "api",
   "version": "1.0.0",
   "main": "server.js",
+   "proxy": "http://localhost:5001",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "../front && npm start",
+    "frontend": "../front && npm start",
     "start": "concurrently \"npm run server\" \"npm run frontend\"",
     "server": "nodemon server.js"
+   
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,7 @@
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "concurrently": "^9.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",
@@ -25,4 +29,5 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4"
   }
+  
 }

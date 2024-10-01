@@ -17,7 +17,7 @@ const OrderDetailsScreen = () => {
           },
         };
 
-        const { data } = await axios.get(`/api/orders/${id}`, config);
+        const { data } = await axios.get(`/api/Order/${id}`, config);
         setOrder(data);
       } catch (error) {
         setMessage('Erreur lors de la récupération de la commande');
