@@ -5,10 +5,10 @@ import store from './store';
 import HomeScreen from './screens/HomeScreen'; 
 import CartScreen from './screens/CartScreen'; 
 import LoginScreen from './screens/LoginScreen';
-import OrderPaymentScreen from './screens/OrderPaymentScreen'; 
+import OrderPaymentScreen from './screens/OrderPaymentScreen'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import CreateOrderScreen from './screens/CreateOrderScreen';
+
 import RegisterScreen from './screens/RegisterScreen';
 import ProfileScreen from './screens/ProfileScreen';
 function App() {
@@ -18,13 +18,13 @@ function App() {
         <div className="App">
           <Routes>
             
-            <Route path="/register" element={<RegisterScreen />} />
+            <Route path="/signup" element={<RegisterScreen />} />
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/home" element={<HomeScreen />} />
             <Route path="/cart" element={<CartScreen />} />
             <Route path="/payment" element={<OrderPaymentScreen />} />
             <Route path="/" element={<RegisterScreen />} exact />
-            <Route path="/profil" element={<ProfileScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
           </Routes>
         </div>
       </Router>

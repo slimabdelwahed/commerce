@@ -17,6 +17,7 @@ const userRoute = require("./routes/User");
 const productRoute = require("./routes/Product");
 const orderRoute = require('./routes/Order');
 const cors = require('cors');
+console.log("JWT Secret:", process.env.JWT_SECRET);
 
 // Connect DB
 mongoose.connect(process.env.MONGOOSEDB_URL)
@@ -30,7 +31,10 @@ mongoose.connect(process.env.MONGOOSEDB_URL)
         console.error("DB connection error:", err);
     });
 
-    app.use(cors());
+    app.use(cors({
+        origin: '*', // Pour autoriser toutes les origines
+        credentials: true, // Si vous gérez des cookies ou des authentifications
+      }));
 
 // Middleware for JSON parsing
 app.use(express.json());
@@ -39,7 +43,7 @@ app.use(express.json());
 app.use('/api/seed', databaseSeeder);
 
 // Routes for users
-app.use('/api/User', userRoute);
+app.use('/api/Users', userRoute);
 
 // Routes for products
 app.use('/api/Product', productRoute);

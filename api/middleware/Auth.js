@@ -12,6 +12,8 @@ try{
     next();
 }catch(err){
 console.log(err);
+res.status(401);
+throw new Error("Not authorized, token failed");
 }
 }
 if(!token){

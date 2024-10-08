@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -183,4 +183,47 @@ input:focus {
   border-color: #4CAF50;
   outline: none;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}*/
+
+.container {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modern-card {
+  background-color: #ffffff; /* Light card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  overflow: hidden;
+}
+
+.card-title {
+  color: #333; /* Darker text for better readability */
+}
+
+.modern-input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.modern-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.modern-btn {
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.modern-btn:hover {
+  background-color: #0056b3; /* Slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+.text-danger {
+  font-weight: bold;
 }
